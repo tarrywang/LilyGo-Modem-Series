@@ -6,7 +6,6 @@
 
 * The SimShield is an expansion board for the Sim series that includes three-way current detection, LoRa transceiver, and wide-range DC input. It supports the full range of LilyGo T-Sim expansion boards.
 
-
 > \[!IMPORTANT]
 >
 > Warning: Jumper caps and DIP switches must be checked when power is on.
@@ -39,6 +38,23 @@
 2. [A7608X-ESP32 Version](https://lilygo.cc/products/t-a7608e-h?variant=43275846090933)
 3. [A7670X-ESP32 Version](https://lilygo.cc/products/t-sim-a7670e?_pos=1&_sid=f2986df37&_ss=r&variant=42534734495925)
 
+### Pinout
+
+| SIM7000G/A7670X/A7608X ESP32 | GPIO |
+| ---------------------------- | ---- |
+| SIMSHIELD_MOSI               | 23   |
+| SIMSHIELD_MISO               | 19   |
+| SIMSHIELD_SCK                | 18   |
+| SIMSHIELD_SD_CS              | 32   |
+| SIMSHIELD_RADIO_BUSY         | 39   |
+| SIMSHIELD_RADIO_CS           | 5    |
+| SIMSHIELD_RADIO_IRQ          | 34   |
+| SIMSHIELD_RADIO_RST          | 15   |
+| SIMSHIELD_RS_RX              | 13   |
+| SIMSHIELD_RS_TX              | 14   |
+| SIMSHIELD_SDA                | 21   |
+| SIMSHIELD_SCL                | 22   |
+
 ## SIM7600X ESP32
 
 ![SIM7600_ESP32](./images/SIM7600_ESP32.png)
@@ -55,6 +71,23 @@
 
 1. [SIM7600X-ESP32 Version](https://lilygo.cc/products/t-sim7600?_pos=1&_sid=7474cd3cf&_ss=r&variant=42358717939893)
 
+### Pinout
+
+| SIM7600X ESP32       | GPIO |
+| -------------------- | ---- |
+| SIMSHIELD_MOSI       | 23   |
+| SIMSHIELD_MISO       | 19   |
+| SIMSHIELD_SCK        | 18   |
+| SIMSHIELD_SD_CS      | 32   |
+| SIMSHIELD_RADIO_BUSY | 39   |
+| SIMSHIELD_RADIO_CS   | 5    |
+| SIMSHIELD_RADIO_IRQ  | 34   |
+| SIMSHIELD_RADIO_RST  | 14   |
+| SIMSHIELD_RS_RX      | 12   |
+| SIMSHIELD_RS_TX      | 13   |
+| SIMSHIELD_SDA        | 21   |
+| SIMSHIELD_SCL        | 22   |
+
 ## SIM7670G ESP32S3
 
 ![SIM7670G_ESP32S3](./images/SIM7670G_ESP32S3.png)
@@ -67,6 +100,23 @@
 
 1. [SIM7670G-ESP32S3 Version](https://lilygo.cc/products/t-sim-7670g-s3?_pos=1&_sid=2be878e69&_ss=r)
 
+### Pinout
+
+| SIM7670G ESP32S3     | GPIO |
+| -------------------- | ---- |
+| SIMSHIELD_MOSI       | 15   |
+| SIMSHIELD_MISO       | 7    |
+| SIMSHIELD_SCK        | 16   |
+| SIMSHIELD_SD_CS      | 46   |
+| SIMSHIELD_RADIO_BUSY | 38   |
+| SIMSHIELD_RADIO_CS   | 39   |
+| SIMSHIELD_RADIO_IRQ  | 6    |
+| SIMSHIELD_RADIO_RST  | 40   |
+| SIMSHIELD_RS_RX      | 41   |
+| SIMSHIELD_RS_TX      | 42   |
+| SIMSHIELD_SDA        | 2    |
+| SIMSHIELD_SCL        | 1    |
+
 ## A7608X ESP32S3
 
 ![A7608_ESP32S3](./images/A7608_ESP32S3.png)
@@ -78,6 +128,23 @@
 ### Applicable Models
 
 1. [A7608X-ESP32S3 Version](https://lilygo.cc/products/t-a7608e-h?_pos=1&_sid=e4fd02f43&_ss=r)
+
+### Pinout
+
+| SIM7670G ESP32S3     | GPIO |
+| -------------------- | ---- |
+| SIMSHIELD_MOSI       | 11   |
+| SIMSHIELD_MISO       | 10   |
+| SIMSHIELD_SCK        | 12   |
+| SIMSHIELD_SD_CS      | 45   |
+| SIMSHIELD_RADIO_BUSY | 38   |
+| SIMSHIELD_RADIO_CS   | 39   |
+| SIMSHIELD_RADIO_IRQ  | 9    |
+| SIMSHIELD_RADIO_RST  | 40   |
+| SIMSHIELD_RS_RX      | 41   |
+| SIMSHIELD_RS_TX      | 42   |
+| SIMSHIELD_SDA        | 2    |
+| SIMSHIELD_SCL        | 1    |
 
 ## SIM7080G ESP32S3
 
@@ -96,6 +163,23 @@
 ### Applicable Models
 
 1. [SIM7080G-ESP32S3 Version](https://lilygo.cc/products/t-sim7080-s3?_pos=1&_sid=7d3cc194f&_ss=r)
+
+### Pinout
+
+| SIM7080G ESP32S3     | GPIO |
+| -------------------- | ---- |
+| SIMSHIELD_MOSI       | 11   |
+| SIMSHIELD_MISO       | 13   |
+| SIMSHIELD_SCK        | 12   |
+| SIMSHIELD_SD_CS      | 21   |
+| SIMSHIELD_RADIO_BUSY | 48   |
+| SIMSHIELD_RADIO_CS   | 45   |
+| SIMSHIELD_RADIO_IRQ  | 8    |
+| SIMSHIELD_RADIO_RST  | 47   |
+| SIMSHIELD_RS_RX      | 2    |
+| SIMSHIELD_RS_TX      | 1    |
+| SIMSHIELD_SDA        | 44   |
+| SIMSHIELD_SCL        | 43   |
 
 ## Monitor battery charging and discharging jumper settings
 
@@ -145,3 +229,11 @@
 
 * **The battery input interface is connected in parallel with the onboard 18650. If an external battery is connected, do not install the battery on the 18650 socket.**
 * **Current detection channel 1 (this channel is unavailable if a battery is connected via a jumper cap)**
+
+## Examples
+
+1. [SimShield_LoRaReceive](../../../examples/SimShield_LoRaReceive/SimShield_LoRaReceive.ino)
+2. [SimShield_LoRaTransmit](../../../examples/SimShield_LoRaTransmit/SimShield_LoRaTransmit.ino)
+3. [SimShieldCurrentSensor](../../../examples/SimShieldCurrentSensor/SimShieldCurrentSensor.ino)
+4. [SimShieldFactory](../../../examples/SimShieldFactory/SimShieldFactory.ino)
+5. [SerialRS485](../../../examples/SerialRS485/SerialRS485.ino)
