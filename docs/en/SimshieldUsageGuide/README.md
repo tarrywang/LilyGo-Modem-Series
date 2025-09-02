@@ -131,7 +131,7 @@
 
 ### Pinout
 
-| SIM7670G ESP32S3     | GPIO |
+| A7608X ESP32S3       | GPIO |
 | -------------------- | ---- |
 | SIMSHIELD_MOSI       | 11   |
 | SIMSHIELD_MISO       | 10   |
@@ -181,6 +181,43 @@
 | SIMSHIELD_SDA        | 44   |
 | SIMSHIELD_SCL        | 43   |
 
+## SIM7000G/A7670X/SIM7670G/SIM7080G Standard Series
+
+![SIM7000_A7608_A7670_ESP32](./images/Standard%20Series.png)
+
+1. **J25** short **IO** -> **LP2**
+2. **J21** short **RP1** -> **5V**
+3. **SW1** is turned to **ON**, and the remaining **SW2, SW3, and SW4** must not be in the ON position.
+
+### Applicable Models
+
+1. [Almost done](https://lilygo.cc/)
+
+### Pinout
+
+| SIM7000G/A7670X/SIM7670G/SIM7080G Standard Series | GPIO |
+| ------------------------------------------------- | ---- |
+| SIMSHIELD_MOSI                                    | 11   |
+| SIMSHIELD_MISO                                    | 13   |
+| SIMSHIELD_SCK                                     | 12   |
+| SIMSHIELD_SD_CS                                   | 37   |
+| SIMSHIELD_RADIO_BUSY                              | 15   |
+| SIMSHIELD_RADIO_CS                                | 38   |
+| SIMSHIELD_RADIO_IRQ                               | 14   |
+| SIMSHIELD_RADIO_RST                               | 39   |
+| SIMSHIELD_RS_RX                                   | 40   |
+| SIMSHIELD_RS_TX                                   | 41   |
+| SIMSHIELD_SDA                                     | 3    |
+| SIMSHIELD_SCL                                     | 2    |
+
+* Standard Series uses the same GPIO regardless of modem model
+
+# Connect the battery to the motherboard
+
+* Follow the method shown in the figure below to short-circuit the jumper cap to route the external battery connector to the mainboard battery interface and skip the current detection.
+
+![BATTERY_SOKECT](./images/BATTERY_SOKECT.png)
+
 ## Monitor battery charging and discharging jumper settings
 
 * The vertical jumper cap in the figure below routes the battery current to INA3221 channel 2, and the battery charging and discharging current can be monitored by reading the INA3221 sensor. **At this time, do not connect anything to the crimp terminal interface.**
@@ -190,7 +227,9 @@
 
 ## 5V 2.00mm 2Pin power supply interface
 
-* This interface is used to supply external power and has no other functions.
+* This port is for external power supply and has no other functions.
+* You can also use the same JST 2.0mm cable to connect directly to the mainboard solar port for charging, **but make sure the J21 jumper cap is unconnected**.
+* Using the JST 2.0 cable for charging reduces the voltage drop across the SimShield diode. However, using J21 to provide power will increase the DC power supply input voltage drop. If solar power is not available, connecting the JST 2.0 port to the solar input port is a better option.
 
 ## SD interface
 
@@ -237,3 +276,7 @@
 3. [SimShieldCurrentSensor](../../../examples/SimShieldCurrentSensor/SimShieldCurrentSensor.ino)
 4. [SimShieldFactory](../../../examples/SimShieldFactory/SimShieldFactory.ino)
 5. [SerialRS485](../../../examples/SerialRS485/SerialRS485.ino)
+
+## Schematic
+
+[T-SimShield-Rev1.0 schematic](../../../schematic/shield/T-SimShield-Rev1.0.pdf)
