@@ -145,12 +145,17 @@
 
 ### ⚡ Electrical parameters
 
-| Features                        | Details |
-| ------------------------------- | ------- |
-| 🔗USB-C Input Voltage            | 5V      |
-| ⚡Solar Input Voltage            | 5~6V    |
-| ⚡USB-C/Solar Charge Max Current | 500mA   |
-| 🔋Battery Voltage                | 3.7V    |
+| Features                        | Details   |
+| ------------------------------- | --------- |
+| 🔗USB-C input voltage range      | 4.5V~5.5V |
+| 🔗VBUS Pin input voltage range   | 4.5V~5.5V |
+| ⚡Solar Input Voltage            | 5 ~ 6V    |
+| ⚡USB-C/Solar Charge Max Current | 500mA     |
+| 🔋Battery Voltage                | 3.7V      |
+| 🔋Battery socket voltage range   | 3.4~4.3V  |
+
+* The minimum voltage of battery power supply depends on the discharge capacity of the battery. The minimum power supply voltage test using a voltage regulator can be as low as 2.7V (due to the low voltage stability of the voltage regulator)
+* The VBUS pin is on the same line as the USB-C port. When connected to USB-C, the VBUS pin will also have voltage. The VBUS pin can only be used for external power input and will not provide power to the outside.
 
 > \[!TIP]
 >
@@ -180,7 +185,7 @@
 | JST 1.0mm `SPEK`           | Connect speakers              | PCB Bottom |
 | JST 1.0mm `MIC`            | Connect condenser microphone  | PCB Bottom |
 | JST 1.0mm `RTC`            | Connect 3~3.3V button battery | PCB Bottom |
-| JST 2.0mm Solar            | Connect to a 5~6V solar panel | PCB Top    |
+| JST 2.0mm `Solar`          | Connect to a 5~6V solar panel | PCB Top    |
 | 24 Pin 0.5mm FPC Connector | Connect OV2640/OV5640 camera  | PCB Top    |
 
 * Camera models support cameras supported by esp32 platform

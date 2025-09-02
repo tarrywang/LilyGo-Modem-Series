@@ -122,12 +122,17 @@
 
 ### ⚡ Electrical parameters
 
-| Features                        | Details |
-| ------------------------------- | ------- |
-| 🔗USB-C Input Voltage            | 5V      |
-| ⚡Solar Input Voltage            | 5~6V    |
-| ⚡USB-C/Solar Charge Max Current | 500mA   |
-| 🔋Battery Voltage                | 3.7V    |
+| Features                        | Details   |
+| ------------------------------- | --------- |
+| 🔗USB-C input voltage range      | 4.5V~5.5V |
+| 🔗VBUS Pin input voltage range   | 4.5V~5.5V |
+| ⚡Solar Input Voltage            | 5 ~ 6V    |
+| ⚡USB-C/Solar Charge Max Current | 500mA     |
+| 🔋Battery Voltage                | 3.7V      |
+| 🔋Battery socket voltage range   | 3.4~4.3V  |
+
+* The minimum voltage of battery power supply depends on the discharge capacity of the battery. The minimum power supply voltage test using a voltage regulator can be as low as 2.7V (due to the low voltage stability of the voltage regulator)
+* The VBUS pin is on the same line as the USB-C port. When connected to USB-C, the VBUS pin will also have voltage. The VBUS pin can only be used for external power input and will not provide power to the outside.
 
 > \[!TIP]
 >
@@ -154,7 +159,7 @@
 
 | Button                     | Function                      | Location |
 | -------------------------- | ----------------------------- | -------- |
-| JST 2.0mm Solar            | Connect to a 5~6V solar panel | PCB Top  |
+| JST 2.0mm `Solar`          | Connect to a 5~6V solar panel | PCB Top  |
 | 24 Pin 0.5mm FPC Connector | Connect OV2640/OV5640 camera  | PCB Top  |
 
 * Camera models support cameras supported by esp32 platform
@@ -185,12 +190,12 @@
 
 ### LED Description
 
-| FUNCTION        | COLOR                            | STATE                                                                  |
-| --------------- | -------------------------------- | ---------------------------------------------------------------------- |
-| MODEM STATE     | RED   (Near the modem)           | Startup:ON                                                             |
-| MODEM NET       | RED   (Near the modem)           | Network status indicator                                               |
-| CHARGE LED      | RED  (Near the battery switch)   | Charging:ON  Charging complete:OFF                                     |
-| CHARGE DONE LED | GREEN  (Near the battery switch) | Charging:OFF  Charging complete:ON                                     |
+| FUNCTION        | COLOR                            | STATE                              |
+| --------------- | -------------------------------- | ---------------------------------- |
+| MODEM STATE     | RED   (Near the modem)           | Startup:ON                         |
+| MODEM NET       | RED   (Near the modem)           | Network status indicator           |
+| CHARGE LED      | RED  (Near the battery switch)   | Charging:ON  Charging complete:OFF |
+| CHARGE DONE LED | GREEN  (Near the battery switch) | Charging:OFF  Charging complete:ON |
 
 * `CHARGE DONE LED` remains on if no battery is connected
 * Modem Status light and network status led cannot be turned off
