@@ -115,11 +115,12 @@
 
 ### Button Description
 
-| Button                   | Function                            |
-| ------------------------ | ----------------------------------- |
-| BOOT(Close to esp)       | Customizable function/Download mode |
-| RST                      | Reset devices button                |
-| SIM-BOOT(Close to modem) | Modem Upgrade mode                  |
+| Button                   | Function                                                                             |
+| ------------------------ | ------------------------------------------------------------------------------------ |
+| BOOT(Close to esp)       | Customizable function/Download mode                                                  |
+| RST                      | Reset devices button                                                                 |
+| SIM-BOOT(Close to modem) | Modem Upgrade mode                                                                   |
+| PWR(Close to modem)      | When the battery is first connected, press PWR to activate the battery power supply. |
 
 * Press and hold the `BOOT` button before powering on. The board is now in waiting mode for downloading.
 * Before powering on, keep the `SIM-BOOT` button pressed to put the modem into firmware update mode.
