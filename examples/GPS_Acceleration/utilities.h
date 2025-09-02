@@ -558,6 +558,22 @@
         #define PRODUCT_MODEL_NAME                  "LilyGo-SIM7600X-S3-Standard"
     #endif
 
+    //! The following pins are for SimShield and need to be used with SimShield
+    //! 以下引脚针对SimShield,需要搭配SimShield 
+    #define SIMSHIELD_MOSI                      (11)
+    #define SIMSHIELD_MISO                      (13)
+    #define SIMSHIELD_SCK                       (12)
+    #define SIMSHIELD_SD_CS                     (37)
+    #define SIMSHIELD_RADIO_BUSY                (15)
+    #define SIMSHIELD_RADIO_CS                  (38)
+    #define SIMSHIELD_RADIO_IRQ                 (14)
+    #define SIMSHIELD_RADIO_RST                 (39)
+    #define SIMSHIELD_RS_RX                     (40)
+    #define SIMSHIELD_RS_TX                     (41)
+    #define SIMSHIELD_SDA                       (3)
+    #define SIMSHIELD_SCL                       (2)
+    #define SerialRS485                         Serial2
+
 #elif defined(LILYGO_SIM7080G_S3)
 
     #define SerialAT                    Serial1
