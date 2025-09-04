@@ -165,7 +165,13 @@
 | Short-Circuit Current   | 2 × 4.6A |
 
 > \[!IMPORTANT]
-> When you first connect the battery, the toggle switch will not start the device. You need to connect the USB to activate the BMS. This operation only needs to be done once as long as the battery is not disconnected. If the BMS is in over-voltage/over-current/over-discharge, or if you toggle the switch or reconnect the battery, you need to reconnect the USB-C (ESP-USB) to activate the BMS.
+> Note that the board will not power on when connected to an 18650 battery. To activate battery power, you can use the following two methods to activate the BMS.
+>
+> 1. Method 1: Plug in the USB-C port labeled ESP-USB. Note that the Modem-USB will not power or charge the board.
+> 2. Method 2: Quickly flip the power switch on, then off, then back on again. This will activate the BMS and output power.
+>
+> Please note that even if the power switch is off, you still need to activate the BMS as described above to power the board.
+>
 
 ### Connector
 
@@ -239,6 +245,7 @@
 * **What the onboard switch does**
   1. When using the internal battery pack, the switch will work normally to power/power down the board. However, if an external battery pack is used and connected to the VBAT pin, the switch will be bypassed, meaning the only way to shut down is to disconnect the battery.
   2. The switch is only for battery power and has no effect when plugged into USB
+  3. To activate battery power, please see the `Battery Protector Description` above.
 
 * **About VBUS Pin**
   1. VBUS Pin and USB-C are on the same line. Only when USB-C is connected, VBUS has voltage
