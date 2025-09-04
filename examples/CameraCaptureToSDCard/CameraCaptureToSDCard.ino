@@ -10,6 +10,7 @@
  *      2. T-SIM7000G-S3-Standard
  *      3. T-SIM7080G-S3-Standard
  *      4. T-SIM7670G-S3-Standard
+ *      5. T-SIM7600X-S3-Standard
  *      Other models are not supported
  *
  * */
@@ -19,8 +20,8 @@
 #include <SD.h>
 
 #if !defined(LILYGO_SIM7000G_S3_STAN) && !defined(LILYGO_SIM7080G_S3_STAN) \
-    && !defined(LILYGO_SIM7670G_S3_STAN) && !defined(LILYGO_A7670X_S3_STAN)
-#error "This sketch is only applicable to the T-A7670X-S3-Standard,T-SIM7000G-S3-Standard,T-SIM7080G-S3-Standard,T-SIM7670G-S3-Standard"
+    && !defined(LILYGO_SIM7670G_S3_STAN) && !defined(LILYGO_A7670X_S3_STAN)  && !defined(LILYGO_SIM7600X_S3_STAN)
+#error "This sketch is only applicable to the T-A7670X-S3-Standard,T-SIM7000G-S3-Standard,T-SIM7080G-S3-Standard,T-SIM7670G-S3-Standard,T-SIM7600X-S3-Standard"
 #endif
 
 #define ENABLE_BATTERY_MON
