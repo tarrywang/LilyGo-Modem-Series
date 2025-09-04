@@ -80,42 +80,44 @@
 
 ### 📍 Pins Map
 
-| Name              | GPIO NUM | Free |
-| ----------------- | -------- | ---- |
-| Modem TX          | 4        | ❌    |
-| Modem RX          | 5        | ❌    |
-| Modem RING        | 6        | ❌    |
-| Modem DTR         | 7        | ❌    |
-| Modem PWRKEY      | 46       | ❌    |
-| GPS RX*           | 48       | ❌    |
-| GPS TX*           | 45       | ❌    |
-| Modem RTS*        | 48       | ❌    |
-| Modem CTS*        | 45       | ❌    |
-| GPS PPS           | 17       | ❌    |
-| GPS Shield Wakeup | 0        | ❌    |
-| Battery ADC Pin   | 8        | ❌    |
-| Solar ADC Pin     | 18       | ❌    |
-| SD SCK            | 12       | ❌    |
-| SD MISO           | 13       | ❌    |
-| SD MOSI           | 11       | ❌    |
-| SD CS             | 10       | ❌    |
-| Power Save Mode   | 42       | ❌    |
-| Camera XCLK       | 21       | ❌    |
-| Camera SIOD       | 1        | ❌    |
-| Camera SIOC       | 41       | ❌    |
-| Camera VSYNC      | 9        | ❌    |
-| Camera HREF       | 14       | ❌    |
-| Camera PCLK       | 37       | ❌    |
-| Camera Y9         | 40       | ❌    |
-| Camera Y8         | 39       | ❌    |
-| Camera Y7         | 38       | ❌    |
-| Camera Y6         | 36       | ❌    |
-| Camera Y5         | 16       | ❌    |
-| Camera Y4         | 47       | ❌    |
-| Camera Y3         | 15       | ❌    |
-| Camera Y2         | 35       | ❌    |
-| Default SDA       | 3        | ✅️    |
-| Default SCL       | 2        | ✅️    |
+| Name              | GPIO NUM           | Free |
+| ----------------- | ------------------ | ---- |
+| Modem TX          | 4                  | ❌    |
+| Modem RX          | 5                  | ❌    |
+| Modem RING        | 6                  | ❌    |
+| Modem DTR         | 7                  | ❌    |
+| Modem PWRKEY      | 46                 | ❌    |
+| GPS RX*           | 48                 | ❌    |
+| GPS TX*           | 45                 | ❌    |
+| Modem RTS*        | 48                 | ❌    |
+| Modem CTS*        | 45                 | ❌    |
+| GPS PPS           | 17                 | ❌    |
+| GPS Shield Wakeup | 0                  | ❌    |
+| Battery ADC Pin   | 8                  | ❌    |
+| Solar ADC Pin     | 18                 | ❌    |
+| SD SCK            | 12                 | ❌    |
+| SD MISO           | 13                 | ❌    |
+| SD MOSI           | 11                 | ❌    |
+| SD CS             | 10                 | ❌    |
+| Power Save Mode   | 42                 | ❌    |
+| Camera XCLK       | 21                 | ❌    |
+| Camera SIOD       | 1                  | ❌    |
+| Camera SIOC       | 41                 | ❌    |
+| Camera VSYNC      | 9                  | ❌    |
+| Camera HREF       | 14                 | ❌    |
+| Camera PCLK       | 37                 | ❌    |
+| Camera Y9         | 40                 | ❌    |
+| Camera Y8         | 39                 | ❌    |
+| Camera Y7         | 38                 | ❌    |
+| Camera Y6         | 36                 | ❌    |
+| Camera Y5         | 16                 | ❌    |
+| Camera Y4         | 47                 | ❌    |
+| Camera Y3         | 15                 | ❌    |
+| Camera Y2         | 35                 | ❌    |
+| Camera RESET      | See the tips below | ❌    |
+| Camera PWD        | See the tips below | ❌    |
+| Default SDA       | 3                  | ✅️    |
+| Default SCL       | 2                  | ✅️    |
 
 * The `Power Save Mode pin` is used to set the power capability of the power supply. Setting it to HIGH enables maximum power output. Setting it to LOW reduces current consumption.
 * If a camera is connected externally, there will be no free GPIO. If the camera is not used, the camera's GPIO can be used for other purposes.
@@ -123,6 +125,10 @@
 * `GPS Shield Wakeup Pin` is only used when an external GPS module is connected. Otherwise, it is idle. It is not recommended to use this GPIO. SIM7670G Using internal GPS, so this pin is useless
 * The camera must be powered on to be detected, otherwise the camera cannot be used. For how to turn it on, please refer to the Camera example.
 * Modem RTS/Modem CTS are not connected by default. They are connected to the GPS RX/TX of the Modem by default. If you need to use them, you need to short-circuit the RTS/CTS short-circuit pads on the back of the PCB, and then separate the GPS TX and RX pads.
+* `Camera RESET` : To maximize GPIO usage, no GPIO is assigned to the camera reset pin, so a power cycle is used to reset the camera.
+The power-on sequence is: power on all cameras -> power off all cameras -> delay 300 milliseconds -> power on all cameras -> delay 100 milliseconds.
+* `Camera PWD` : In order to maximize the use of GPIO, all GPIOs are not assigned to the camera PWD Pin. When the camera is not in use, you only need to turn off the camera power to completely turn off the power supply of the camera.
+* `Camera Pins` : if the camera is not used, then all the pins assigned to the camera by default can be freely allocated and used without restrictions
 
 ### ⚡ Electrical parameters
 
