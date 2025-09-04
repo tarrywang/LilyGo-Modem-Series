@@ -182,13 +182,12 @@ The power-on sequence is: power on all cameras -> power off all cameras -> delay
 | Short-Circuit Current   | 2 × 4.6A |
 
 > \[!IMPORTANT]
-> Note that the board will not power on when connected to an 18650 battery. To activate battery power, you can use the following two methods to activate the BMS.
+> Please note that the development board will not power on when connected to an 18650 battery. To activate battery power, you can use the following method to activate the BMS.
 >
-> 1. Method 1: Plug in the USB-C port labeled ESP-USB. Note that the Modem-USB will not power or charge the board.
-> 2. Method 2: Quickly flip the power switch on, then off, then back on again. This will activate the BMS and output power.
+> Method: Plug into the USB-C port labeled ESP-USB. Please note that the Modem-USB port will not power or charge the development board.
 >
-> Please note that even if the power switch is off, you still need to activate the BMS as described above to power the board.
->
+> Please note that even if the power switch is off, you still need to activate the BMS as described above to power the development board.
+> If you briefly turn the power switch off, turning it back on will also reconnect the battery power, eliminating the need to reconnect the USB port to activate the BMS.
 
 ### Connector Description
 
