@@ -417,8 +417,7 @@
     #define MODEM_GPS_ENABLE_GPIO               (127)
     #define MODEM_GPS_ENABLE_LEVEL              (1)
 
-    // T-SIM7600 startup time needs to wait
-    #define MODEM_START_WAIT_MS                 (15000)
+
 
 
 
@@ -509,7 +508,9 @@
 
     #ifdef LILYGO_SIM7000G_S3_STAN
         // Modem model:SIM7000G
+    #ifndef TINY_GSM_MODEM_SIM7000SSL
         #define TINY_GSM_MODEM_SIM7000SSL
+    #endif
         // GPS antenna power control GPIO, this GPIO is the modem GPIO
         #define MODEM_GPS_ENABLE_GPIO               (48)
         #define MODEM_GPS_ENABLE_LEVEL              (1)
@@ -519,7 +520,9 @@
 
     #ifdef LILYGO_SIM7080G_S3_STAN
         // Modem model:SIM7080G
+    #ifndef TINY_GSM_MODEM_SIM7080
         #define TINY_GSM_MODEM_SIM7080
+    #endif
         // GPS antenna power control GPIO, this GPIO is the modem GPIO
         #define MODEM_GPS_ENABLE_GPIO               (5)
         #define MODEM_GPS_ENABLE_LEVEL              (1)
@@ -529,7 +532,9 @@
 
     #ifdef LILYGO_SIM7670G_S3_STAN
         // Modem model:SIM7670G
+    #ifndef TINY_GSM_MODEM_SIM7670G
         #define TINY_GSM_MODEM_SIM7670G
+    #endif
         // GPS antenna power control GPIO, this GPIO is the modem GPIO
         #define MODEM_GPS_ENABLE_GPIO               (1)
         #define MODEM_GPS_ENABLE_LEVEL              (1)
@@ -538,7 +543,9 @@
 
     #ifdef LILYGO_A7670X_S3_STAN
         // Modem model:A7670G/A7670E/A7670SA
+    #ifndef TINY_GSM_MODEM_A7670
         #define TINY_GSM_MODEM_A7670
+    #endif
         // GPS antenna power control GPIO, this GPIO is the modem GPIO
         #define MODEM_GPS_ENABLE_GPIO               (1)
         #define MODEM_GPS_ENABLE_LEVEL              (1)
@@ -549,7 +556,9 @@
 
     #ifdef LILYGO_SIM7600X_S3_STAN
         // Modem model:SIM7600E/A/SA/G
+    #ifndef TINY_GSM_MODEM_SIM7600
         #define TINY_GSM_MODEM_SIM7600
+    #endif
         // MODEM aux power supply
         #define MODEM_GPS_ENABLE_GPIO               (127)
         #define MODEM_GPS_ENABLE_LEVEL              (1)
@@ -804,9 +813,7 @@
 #endif
 
 
-#ifndef MODEM_START_WAIT_MS
-    #define MODEM_START_WAIT_MS             3000
-#endif
+
 
 #if defined(TINY_GSM_MODEM_SIM7670G) || defined(TINY_GSM_MODEM_A7670) || defined(TINY_GSM_MODEM_A7608)
     #define MODEM_REG_SMS_ONLY
@@ -826,6 +833,8 @@
 #elif defined(TINY_GSM_MODEM_SIM7600)
     #define MODEM_POWERON_PULSE_WIDTH_MS      (500)
     #define MODEM_POWEROFF_PULSE_WIDTH_MS     (3000)
+    // T-SIM7600 startup time needs to wait
+    #define MODEM_START_WAIT_MS               (15000)
 #elif defined(TINY_GSM_MODEM_SIM7080)
     #define MODEM_POWERON_PULSE_WIDTH_MS      (1000)
     #define MODEM_POWEROFF_PULSE_WIDTH_MS     (1300)
@@ -837,3 +846,6 @@
     #define MODEM_POWEROFF_PULSE_WIDTH_MS     (1300)
 #endif
 
+#ifndef MODEM_START_WAIT_MS
+    #define MODEM_START_WAIT_MS             3000
+#endif
