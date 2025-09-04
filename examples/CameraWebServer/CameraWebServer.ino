@@ -71,6 +71,22 @@ bool setCameraPower(bool enable)
     Wire.beginTransmission(0x28);
     Wire.write(control, sizeof(control) / sizeof(control[0]));
     Wire.endTransmission();
+    
+    if (enable) {
+        /*
+        * Maximize the use of GPIO. No GPIO is assigned to the camera reset pin, so the camera is reset by powering on again.
+        * */
+        control[1] = 0x00;
+        Wire.beginTransmission(0x28);
+        Wire.write(control, sizeof(control) / sizeof(control[0]));
+        Wire.endTransmission();
+        delay(300);
+        control[1] = 0x0F;
+        Wire.beginTransmission(0x28);
+        Wire.write(control, sizeof(control) / sizeof(control[0]));
+        Wire.endTransmission();
+        delay(100);
+    }
     return true;
 }
 
