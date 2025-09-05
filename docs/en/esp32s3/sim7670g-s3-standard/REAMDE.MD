@@ -172,12 +172,16 @@ The power-on sequence is: power on all cameras -> power off all cameras -> delay
 
 ### Connector
 
-| Button                     | Function                      | Location |
-| -------------------------- | ----------------------------- | -------- |
-| JST 2.0mm `Solar`          | Connect to a 5~6V solar panel | PCB Top  |
-| 24 Pin 0.5mm FPC Connector | Connect OV2640/OV5640 camera  | PCB Top  |
+| Button                     | Function                      | Location   |
+| -------------------------- | ----------------------------- | ---------- |
+| JST 2.0mm `Solar`          | Connect to a 5~6V solar panel | PCB Top    |
+| 24 Pin 0.5mm FPC Connector | Connect OV2640/OV5640 camera  | PCB Top    |
+| QWIIC                      | I2C Interface                 | PCB Bottom |
+| QWUART or QWIIC            | UART or I2C Interface         | PCB Bottom |
 
 * Camera models support cameras supported by esp32 platform
+* `QWIIC I2C` : Fixed to I2C interface, cannot be changed to other functions , Examples see [QWIIC_I2C_Scan.ino](../../../../examples/QWIIC_I2C_Scan/QWIIC_I2C_Scan.ino)
+* `QWIIC UART` : The default is ESP serial output, which can also be changed to the second I2C interface, I2C Example see [QWIIC_I2C_Scan.ino](../../../../examples/QWIIC_I2C_Scan/QWIIC_I2C_Scan.ino) / , Uart example see [QWIIC_UART_loopback.ino](../../../../examples/QWIIC_UART_loopback/QWIIC_UART_loopback.ino)
 
 ### Button Description
 
