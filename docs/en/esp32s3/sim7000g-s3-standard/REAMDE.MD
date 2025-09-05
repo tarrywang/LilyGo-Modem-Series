@@ -178,6 +178,7 @@ The power-on sequence is: power on all cameras -> power off all cameras -> delay
 * Camera models support cameras supported by esp32 platform
 * `QWIIC I2C` : Fixed to I2C interface, cannot be changed to other functions , Examples see [QWIIC_I2C_Scan.ino](../../../../examples/QWIIC_I2C_Scan/QWIIC_I2C_Scan.ino)
 * `QWIIC UART` : The default is ESP serial output, which can also be changed to the second I2C interface, I2C Example see [QWIIC_I2C_Scan.ino](../../../../examples/QWIIC_I2C_Scan/QWIIC_I2C_Scan.ino) / , Uart example see [QWIIC_UART_loopback.ino](../../../../examples/QWIIC_UART_loopback/QWIIC_UART_loopback.ino)
+* `JST 2.0mm Solar` : This is the solar panel voltage input interface. This interface is only used as a solar or external power charging interface. It cannot be used to provide power to the motherboard after removing the battery.
 
 ### Button Description
 

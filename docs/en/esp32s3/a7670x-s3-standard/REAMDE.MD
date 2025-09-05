@@ -204,6 +204,10 @@ The power-on sequence is: power on all cameras -> power off all cameras -> delay
 * Camera models support cameras supported by esp32 platform
 * `QWIIC I2C` : Fixed to I2C interface, cannot be changed to other functions , Examples see [QWIIC_I2C_Scan.ino](../../../../examples/QWIIC_I2C_Scan/QWIIC_I2C_Scan.ino)
 * `QWIIC UART` : The default is ESP serial output, which can also be changed to the second I2C interface, I2C Example see [QWIIC_I2C_Scan.ino](../../../../examples/QWIIC_I2C_Scan/QWIIC_I2C_Scan.ino) / , Uart example see [QWIIC_UART_loopback.ino](../../../../examples/QWIIC_UART_loopback/QWIIC_UART_loopback.ino)
+* `JST 2.0mm Solar` : This is the solar panel voltage input interface. This interface is only used as a solar or external power charging interface. It cannot be used to provide power to the motherboard after removing the battery.
+* `JST 1.0mm SPEK`: This is the external speaker interface, the maximum output power of this interface is 8 ohms 1W
+* `JST 1.0mm MIC`: This is an external condenser microphone interface for calls. The condenser microphone is directly connected to the modem. Only condenser microphones can be used, not digital microphones.
+* `JST 1.0mm RTC`: This is the GPS backup power battery interface. If you do not connect this battery, the GPS will not have the hot start function. Connecting a battery to this interface will enable the GPS hot start function.
 
 ### Button Description
 
