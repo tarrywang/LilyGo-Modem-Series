@@ -22,8 +22,13 @@
 // Products Link:https://www.lilygo.cc/products/t-sim-a7670e
 // #define LILYGO_T_A7670
 
-// Products Link: https://lilygo.cc/products/t-call-v1-4
+// There are two versions of T-Call A7670X. Please be careful to distinguish them. Please check the silkscreen on the front of the board to distinguish them.
+// T-Call A7670X 有两个版本,请注意区分，如何区分请查看板子正面丝印.
 // #define LILYGO_T_CALL_A7670_V1_0
+
+// There are two versions of T-Call A7670X. Please be careful to distinguish them. Please check the silkscreen on the front of the board to distinguish them.
+// T-Call A7670X 有两个版本,请注意区分，如何区分请查看板子正面丝印.
+// #define LILYGO_T_CALL_A7670_V1_1
 
 // Products Link: https://lilygo.cc/products/t-sim-7670g-s3
 // #define LILYGO_T_SIM7670G_S3
@@ -819,8 +824,7 @@
     #define MODEM_REG_SMS_ONLY
 #endif
 
-// T-Call-A767X V1.0 and V1.1 have different Pinmaps and cannot be used universally , Invalid version
-// #define LILYGO_T_CALL_A7670_V1_1
+// Invalid version
 // #define LILYGO_T_A7608X_DC_S3
 
 // Power on/off sequence
