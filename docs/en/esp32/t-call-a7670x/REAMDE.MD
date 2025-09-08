@@ -18,6 +18,11 @@
 
 [1]: https://www.lilygo.cc/products/t-call-v1-4
 
+> \[!IMPORTANT]
+> There are two versions of T-Call A7670X. Please be careful to distinguish them. Please check the silkscreen on the front of the board to distinguish them.
+> T-Call A7670X 有两个版本,请注意区分，如何区分请查看板子正面丝印.
+> ![version](./images/version.png)
+
 ### Modem differences
 
 | Model           | GPS | Phone Call | SMS | Frequency band                                                                                                     |
