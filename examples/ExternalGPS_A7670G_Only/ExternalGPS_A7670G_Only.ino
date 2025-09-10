@@ -1,5 +1,5 @@
 /**
- * @file      GPSShield.ino
+ * @file      ExternalGPS_A7670G_Only.ino
  * @author    Lewis He (lewishe@outlook.com)
  * @license   MIT
  * @copyright Copyright (c) 2023  Shenzhen Xin Yuan Electronic Technology Co., Ltd
