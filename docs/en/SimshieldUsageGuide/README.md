@@ -271,11 +271,12 @@
 
 ## Examples
 
-1. [SimShield_LoRaReceive](../../../examples/SimShield_LoRaReceive/SimShield_LoRaReceive.ino)
-2. [SimShield_LoRaTransmit](../../../examples/SimShield_LoRaTransmit/SimShield_LoRaTransmit.ino)
-3. [SimShieldCurrentSensor](../../../examples/SimShieldCurrentSensor/SimShieldCurrentSensor.ino)
-4. [SimShieldFactory](../../../examples/SimShieldFactory/SimShieldFactory.ino)
-5. [SerialRS485](../../../examples/SerialRS485/SerialRS485.ino)
+1. [SimShield_LoRaWAN](../../../examples/SimShield_LoRaWAN/README.MD)
+2. [SimShield_LoRaReceive](../../../examples/SimShield_LoRaReceive/SimShield_LoRaReceive.ino)
+3. [SimShield_LoRaTransmit](../../../examples/SimShield_LoRaTransmit/SimShield_LoRaTransmit.ino)
+4. [SimShieldCurrentSensor](../../../examples/SimShieldCurrentSensor/SimShieldCurrentSensor.ino)
+5. [SimShieldFactory](../../../examples/SimShieldFactory/SimShieldFactory.ino)
+6. [SerialRS485](../../../examples/SerialRS485/SerialRS485.ino)
 
 ## Schematic
 
