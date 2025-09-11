@@ -35,6 +35,7 @@
 > How to check the specific model version of the modem? Sending AT+SIMCOMATI can return the firmware version and hardware version used.
 >
 > Please note that whether the GNSS IPEX antenna connector is on the PCB or not depends on the actual modem version. The A7670G modem does not have internal GPS functionality, regardless of whether GPS is included in your order. If you purchased the A7670G with GPS, you will need to use an external GPS module.
+> A7670G+GPS orders use an external GPS module and can only use [ExternalGPS_A7670G_Only Example](../../../../examples/ExternalGPS_A7670G_Only/ExternalGPS_A7670G_Only.ino). Other GPS examples cannot be used.
 
 ### PlatformIO Quick Start
 
