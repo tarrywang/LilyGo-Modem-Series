@@ -112,6 +112,7 @@ void setup()
                    ||  modemName.startsWith("A7670E-LASE ")) {
             while (1) {
                 Serial.println("The modem does not have built-in GPS function.");
+                Serial.println("If you purchased the A7670G with GPS version, please run this example, https://github.com/Xinyuan-LilyGO/LilyGo-Modem-Series/blob/main/examples/ExternalGPS_A7670G_Only/ExternalGPS_A7670G_Only.ino");
                 delay(1000);
             }
         } else {
@@ -135,13 +136,13 @@ void setup()
     modem.setGPSBaud(115200);
 
 #if defined(TINY_GSM_MODEM_A7670) || defined(TINY_GSM_MODEM_A7608)
-        modem.setGPSMode(GNSS_MODE_GPS_BDS_GALILEO_SBAS_QZSS);
+    modem.setGPSMode(GNSS_MODE_GPS_BDS_GALILEO_SBAS_QZSS);
 #elif defined(TINY_GSM_MODEM_SIM7670G)
-        modem.setGPSMode(GNSS_MODE_GPS_GLONASS_BDS);
+    modem.setGPSMode(GNSS_MODE_GPS_GLONASS_BDS);
 #elif defined(TINY_GSM_MODEM_SIM7600)
-        modem.setGPSMode(GNSS_MODE_ALL);
+    modem.setGPSMode(GNSS_MODE_ALL);
 #elif defined(TINY_GSM_MODEM_SIM7000SSL) || defined(TINY_GSM_MODEM_SIM7000)
-        modem.setGPSMode(GNSS_MODE_ALL);
+    modem.setGPSMode(GNSS_MODE_ALL);
 #endif
 
     modem.configNMEASentence(NMEA_GPGGA | NMEA_GPGSA | NMEA_GPGSV | NMEA_GPRMC);

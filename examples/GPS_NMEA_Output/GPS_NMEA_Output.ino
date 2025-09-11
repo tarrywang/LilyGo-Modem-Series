@@ -111,6 +111,7 @@ void setup()
                    ||  modemName.startsWith("A7670E-LASE ")) {
             while (1) {
                 Serial.println("The modem does not have built-in GPS function.");
+                Serial.println("If you purchased the A7670G with GPS version, please run this example, https://github.com/Xinyuan-LilyGO/LilyGo-Modem-Series/blob/main/examples/ExternalGPS_A7670G_Only/ExternalGPS_A7670G_Only.ino");
                 delay(1000);
             }
         } else {
