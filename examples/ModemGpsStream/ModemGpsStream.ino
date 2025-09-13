@@ -225,6 +225,12 @@ void setup()
 
     if (!external_gps_module) {
         int retry = 15;
+
+#if defined(TINY_GSM_MODEM_SIM7080)
+        // SIM7080G Disable the output first and reconfigure the GPS output
+        modem.configGNSS_OutputPort(NMEA_OUTPUT_DISABLE);
+#endif
+
         Serial.println("Start the Modem GPS module and use the default 115200 baud rate for communication");
         while (!modem.enableGPS(MODEM_GPS_ENABLE_GPIO, MODEM_GPS_ENABLE_LEVEL)) {
             Serial.print(".");
@@ -254,7 +260,7 @@ void setup()
         modem.setGPSMode(GNSS_MODE_ALL);
 #endif
 
-#if defined(TINY_GSM_MODEM_SIM7000SSL) || defined(TINY_GSM_MODEM_SIM7000)
+#if defined(TINY_GSM_MODEM_SIM7000SSL) || defined(TINY_GSM_MODEM_SIM7000) || defined(TINY_GSM_MODEM_SIM7080)
         // Redirect SIM70XX modem GPS NMEA to UART for ESP processing
         modem.configGNSS_OutputPort(NMEA_TO_UART3_PORT);
 #endif
