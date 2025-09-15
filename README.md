@@ -43,3 +43,7 @@
 ## T-SimShield Usage Guide
 
 - 🔧 **[SimShield Usage Guide](./docs/en/SimshieldUsageGuide/README.md)**
+
+## Model Comparison
+
+- 🔧 **[Differences between different versions and models](./docs/model_comparison.md)**
