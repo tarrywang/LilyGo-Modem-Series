@@ -228,6 +228,10 @@ The power-on sequence is: power on all cameras -> power off all cameras -> delay
 * `CHARGE DONE LED` remains on if no battery is connected
 * Modem Status light and network status led cannot be turned off
 
+### eSIM
+
+* The eSIM uses a QFN5*6-8 package and supports 1.8V/3.3V. It's not installed by default and requires soldering.
+
 ### Resource
 
 * [GPS Antenna](../../../../datasheet/GPS%20Antenna%20Specifications.pdf)
