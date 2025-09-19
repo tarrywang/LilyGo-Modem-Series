@@ -42,6 +42,9 @@
 // Products Link: https://lilygo.cc/products/t-sim7000g
 // #define LILYGO_SIM7000G
 
+// Products Link: https://lilygo.cc/products/t-sim7070g
+// #define LILYGO_SIM7070G
+
 // Products Link: https://lilygo.cc/products/a-t-pcie?variant=42335922094261
 // #define LILYGO_T_PCIE_A767X
 
@@ -343,7 +346,7 @@
 
     #define PRODUCT_MODEL_NAME                  "LilyGo-A7608X-DC-S3"
 
-#elif defined(LILYGO_SIM7000G)
+#elif defined(LILYGO_SIM7000G) || defined(LILYGO_SIM7070G)
 
     #define MODEM_DTR_PIN                       (25)
     #define MODEM_RX_PIN                        (26)
@@ -364,8 +367,20 @@
     
     #define SerialAT                            Serial1
 
+    #ifdef LILYGO_SIM7000G
+        // Modem model:SIM7000G
     #ifndef TINY_GSM_MODEM_SIM7000SSL
         #define TINY_GSM_MODEM_SIM7000SSL
+    #endif
+    #define PRODUCT_MODEL_NAME                  "LilyGo-SIM7000G ESP32 Version"
+    #endif
+    
+    #ifdef LILYGO_SIM7070G
+        // Modem model:SIM7070G
+    #ifndef TINY_GSM_MODEM_SIM7080
+        #define TINY_GSM_MODEM_SIM7080
+    #endif
+    #define PRODUCT_MODEL_NAME                  "LilyGo-SIM7070G ESP32 Version"
     #endif
 
     // 127 is defined in GSM as the AUXVDD index
@@ -388,7 +403,7 @@
     #define SIMSHIELD_SCL                       (22)
     #define SerialRS485                         Serial2
 
-    #define PRODUCT_MODEL_NAME                  "LilyGo-SIM7000G ESP32 Version"
+
 
 #elif defined(LILYGO_SIM7600X)
 
