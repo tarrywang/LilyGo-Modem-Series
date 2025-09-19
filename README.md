@@ -22,7 +22,8 @@
 
 - 🔧 **[T-A7670X Quick Start](./docs/en/esp32/a7670-esp32/REAMDE.MD)**
 - 🔧 **[T-A7608X Quick Start](./docs/en/esp32/a7608-esp32/REAMDE.MD)**
-- 🔧 **[T-SIM7000 Quick Start](./docs/en/esp32/sim7000-esp32/REAMDE.MD)**
+- 🔧 **[T-SIM7000G Quick Start](./docs/en/esp32/sim7000-esp32/REAMDE.MD)**
+- 🔧 **[T-SIM7070G Quick Start](./docs/en/esp32/sim7070-esp32/REAMDE.MD)**
 - 🔧 **[T-SIM7600 Quick Start](./docs/en/esp32/sim7600-esp32/REAMDE.MD)**
 - 🔧 **[T-Call-A7670X Quick Start](./docs/en/esp32/t-call-a7670x/REAMDE.MD)**
 - 🔧 **[T-PCIE-Series Quick Start](./docs/en/esp32/pcie-series-esp32/REAMDE.MD)**

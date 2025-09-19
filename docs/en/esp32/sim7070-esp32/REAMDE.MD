@@ -2,28 +2,28 @@
   <img src="../../../../.github/LilyGo_logo.png" alt="LilyGo logo" width="100"/>
 </div>
 
-<h1 align = "center">🌟LilyGo SIM7000G ESP32 Version🌟</h1>
+<h1 align = "center">🌟LilyGo SIM7070G ESP32 Version🌟</h1>
 
 ## Overview
 
-* This page introduces the hardware parameters related to `LilyGo SIM7000G ESP32 Version`
+* This page introduces the hardware parameters related to `LilyGo SIM7070G ESP32 Version`
 
 ### Product
 
 | Product               | SOC            | Flash         | PSRAM         |
 | --------------------- | -------------- | ------------- | ------------- |
-| [T-SIM7000G ESP32][1] | ESP32-WROVER-E | 4MB(Quad-SPI) | 8MB(Quad-SPI) |
+| [T-SIM7070G ESP32][1] | ESP32-WROVER-E | 4MB(Quad-SPI) | 8MB(Quad-SPI) |
 
 [1]: https://lilygo.cc/products/t-sim7000g
 
 ### Modem differences
 
-| Model    | GPS | Frequency band(**Cat-M**)                         | Frequency band(**Cat-NB**)                     | Frequency band(**GSM**) |
-| -------- | --- | ------------------------------------------------- | ---------------------------------------------- | ----------------------- |
-| SIM7000G | ✅   | B1/B2/B3/B4/B5/B8/B12/B13/B18/B19/B20/B26/B28/B39 | B1/B2/B3/B5/B8/B12/B13/B17/B18/B19/B20/B26/B28 | 850/900/1800/1900MHz    |
+| Model    | GPS | Frequency band(**Cat-M**)                                         | Frequency band(**Cat-NB**)                                    | Frequency band(**GSM**) |
+| -------- | --- | ----------------------------------------------------------------- | ------------------------------------------------------------- | ----------------------- |
+| SIM7070G | ✅   | B1/B2/B3/B4/B5/B8/B12/B13/B14/B18/B19/B20/B25/B26/B27/B28/B66/B85 | B1/B2/B3/B4/B5/B8/B12/B13/B18/B19/B20/B25/B26/B28/B66/B71/B85 | 850/900/1800/1900MHz    |
 
 > \[!IMPORTANT]
-> How to check the specific model version of the modem? Sending AT+SIMCOMATI can return the firmware version and hardware version used.
+> SIM7070G GPS and cellular functions cannot be enabled at the same time, otherwise GPS positioning cannot be performed. Cellular positioning must be disabled before positioning can be performed. The two are mutually exclusive.
 >
 
 ### PlatformIO Quick Start
@@ -37,7 +37,7 @@
 5. After restarting `Visual Studio Code`, select `File` in the upper left corner of `Visual Studio Code` -> `Open Folder` -> select the `LilyGo-Modem-Series` directory
 6. Wait for the installation of third-party dependent libraries to complete
 7. Click on the `platformio.ini` file, and in the `platformio` column
-8. Cancel the `;` symbol in front of the line `default_envs = T-SIM7000G` and use `T-SIM7000G` as the default environment
+8. Cancel the `;` symbol in front of the line `default_envs = T-SIM7070G` and use `T-SIM7070G` as the default environment
 9. Uncomment one of the lines `src_dir = xxxx` to ensure that only one line is valid. For example, to enable `src_dir = examples/ATdebug`, remove the leading `;` symbol and save the file. The ATDebug example will now be compiled.
 10. Click the (✔) symbol in the lower left corner to compile
 11. Connect the board to the computer USB-C
@@ -82,7 +82,7 @@
 
      * `Partition Scheme` Please select according to the actual application. For example, select **Huge APP (3MB No OTA/1MB SPIFFS)** , For more partitioning schemes, please see [here](https://docs.espressif.com/projects/esp-idf/en/stable/esp32/api-guides/partition-tables.html)
 
-7. In the open sketch, select the `utilities.h` file and uncomment the line `// #define LILYGO_T_SIM7000G`. Delete the `//` and save the file to use this board as the default configuration.
+7. In the open sketch, select the `utilities.h` file and uncomment the line `// #define LILYGO_T_SIM7070G`. Delete the `//` and save the file to use this board as the default configuration.
 
    ![board_select](../../../static/board_select.jpg)
 
@@ -172,9 +172,9 @@
 
 * [GPS Antenna](../../../../datasheet/GPS%20Antenna%20Specifications.pdf)
 * [LTE Antenna](../../../../datasheet/LTE%20Antenna%20Specifications.pdf)
-* [T-SIM7000G Schematic](../../../../schematic/esp32/T-SIM7000G-200415.pdf)
-* [SIMCOM official SIM7000G All Datasheet](https://cn.simcom.com/product/SIM7000X.html)
-* [For SIM7000 series documentation, please visit the datasheet directory.](../../../../datasheet/SIM7000/)
+* [T-SIM7070G Schematic](../../../../schematic/esp32/T-SIM7000G-200415.pdf)
+* [SIMCOM official SIM7070G All Datasheet](https://www.simcom.com/product/SIM7070G.html)
+* [For SIM7000 series documentation, please visit the datasheet directory.](../../../../datasheet/SIM7080/)
 * [Board dimensions](../../../../dimensions/esp32/T-SIM7000-ESP32.dxf)
 * [Case](../../../../dimensions/esp32/T-SIM7000-ESP32-Case.zip)
 
@@ -187,7 +187,7 @@
   4. If you can see the startup information, it means that the USB2TTL communication is normal. If nothing is displayed in the serial monitor, it may be that the USB2TTL bridge is damaged
 
 * **Upgrade modem firmware**
-  1. [T-SIM7000G Upgrade docs](./upgrade/sim7000_upgrade.md)
+  1. [T-SIM7070G Upgrade docs](../sim7000-esp32/upgrade/sim7000_upgrade.md)
 
 * **Unable to detect SIMCard?**
    1. Need to insert the SIMCard into the board first and then power on to detect the SIM card. If the order is reversed, it will report that the SIMCard cannot be detected.
