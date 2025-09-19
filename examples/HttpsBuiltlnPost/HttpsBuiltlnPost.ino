@@ -259,6 +259,8 @@ void loop()
 #endif
 
 /*
+
+-------------------------------
 SIM7600 Version OK 20250709
 AT+SIMCOMATI
 Manufacturer: SIMCOM INCORPORATED
@@ -270,6 +272,7 @@ MEID:
 +GCAP: +CGSM
 DeviceInfo: 173,170
 
+-------------------------------
 SIM7000G    # 2025/07/10:OK!
 Revision:1529B11SIM7000G
 CSUB:V01
@@ -281,11 +284,22 @@ CSUB:V01
 APRev:1529B11SIM7000,V01
 QCN:MDM9206_TX3.0.SIM7000G_P1.02_20180726
 
+-------------------------------
 
 SIM7080G    # 2025/08/07:OK!
 Revision:1951B16SIM7080
 CSUB:B16V01
 APRev:1951B16SIM7080,B16V01
 QCN:SIM7080G_P1.03_20210823
+
+-------------------------------
+SIM7070G  # 20250919:OK!
+
+Revision:1951B14SIM7070
+CSUB:B14V01
+APRev:1951B14SIM7070,B14V01
+QCN:SIM7070G_P1.03_20210816
+
+-------------------------------
 
 */

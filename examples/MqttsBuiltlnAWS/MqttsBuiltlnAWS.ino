@@ -401,6 +401,14 @@ QCN:SIM7080G_P1.03_20210823
 
 -------------------------------
 
+SIM7070G  # 20250919:OK!
+Revision:1951B14SIM7070
+CSUB:B14V01
+APRev:1951B14SIM7070,B14V01
+QCN:SIM7070G_P1.03_20210816
+
+-------------------------------
+
 */
 #ifndef TINY_GSM_FORK_LIBRARY
 #error "No correct definition detected, Please copy all the [lib directories](https://github.com/Xinyuan-LilyGO/LilyGO-T-A76XX/tree/main/lib) to the arduino libraries directory , See README"
