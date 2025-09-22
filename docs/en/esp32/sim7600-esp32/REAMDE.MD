@@ -196,7 +196,7 @@
   4. If you can see the startup information, it means that the USB2TTL communication is normal. If nothing is displayed in the serial monitor, it may be that the USB2TTL bridge is damaged
 
 * **Upgrade modem firmware**
-  1. [T-SIM7600X Upgrade docs](./upgrade/sim7000_upgrade.md)
+  1. [T-SIM7600X Upgrade docs](./upgrade/sim7600_upgrade.md)
 
 * **Unable to detect SIMCard?**
    1. Need to insert the SIMCard into the board first and then power on to detect the SIM card. If the order is reversed, it will report that the SIMCard cannot be detected.
