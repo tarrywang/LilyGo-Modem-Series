@@ -12,7 +12,7 @@ body:
     id: category
     attributes:
       label: Category
-      description: How would you catagorize this issue?
+      description: How would you categorize this issue?
       multiple: true
       options:
         - Hardware
@@ -33,6 +33,7 @@ body:
         - Not Applicable
         - T-A7670
         - T-A7670 S3
+        - T-A7670G-With-GPS
         - T-Call-A7670
         - T-A7608
         - T-A7608 S3
