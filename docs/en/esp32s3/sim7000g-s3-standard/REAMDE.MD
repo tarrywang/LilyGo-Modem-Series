@@ -136,6 +136,8 @@ The power-on sequence is: power on all cameras -> power off all cameras -> delay
 | ⚡USB-C/Solar Charge Max Current | 500mA     |
 | 🔋Battery Voltage                | 3.7V      |
 | 🔋Battery socket voltage range   | 3.4~4.3V  |
+| 📍**VBUS** ( Pin header)         | 5V        |
+| 📍**VBAT** ( Pin header)         | 4.2V      |
 
 * The minimum voltage of battery power supply depends on the discharge capacity of the battery. The minimum power supply voltage test using a voltage regulator can be as low as 2.7V (due to the low voltage stability of the voltage regulator)
 * The VBUS pin is on the same line as the USB-C port. When connected to USB-C, the VBUS pin will also have voltage. The VBUS pin can only be used for external power input and will not provide power to the outside.
@@ -147,6 +149,8 @@ The power-on sequence is: power on all cameras -> power off all cameras -> delay
 > Please note that this is only a suggestion. It is not necessary to use a 5-10W solar panel. 1W is also acceptable.
 > The size of the solar panel determines the current and speed of solar charging. Please note that depending on the environment,
 > the sunshine time may not exceed one hour per day. At this time, if the solar panel is too small and the light is not sufficient, it cannot be charged.
+> 3. Connect the VBUS pin to the USB-C power supply. If USB-C is present, the VBUS voltage is equal to the USB-C voltage. If USB-C is not present, there is no voltage on VBUS.
+> 4. Connect the VBAT pin to the positive terminal of the battery. This pin can be used to connect an external battery directly to the VBAT pin. When using an external battery, it is best not to connect the battery to the development board's 18650 battery holder unless the battery's parameters are similar to the external battery. Batteries connected to the VBAT pin can be charged using the onboard charge management.
 
 ### ⚡Battery Protector Description
 

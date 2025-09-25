@@ -129,6 +129,8 @@
 | ⚡Solar Input Voltage            | 5~6V    |
 | ⚡USB-C/Solar Charge Max Current | 500mA   |
 | 🔋Battery Voltage                | 3.7V    |
+| 📍**VBUS** ( Pin header)         | 5V      |
+| 📍**VBAT** ( Pin header)         | 4.2V    |
 
 > \[!TIP]
 >
@@ -137,6 +139,8 @@
 > Please note that this is only a suggestion. It is not necessary to use a 5-10W solar panel. 1W is also acceptable.
 > The size of the solar panel determines the current and speed of solar charging. Please note that depending on the environment,
 > the sunshine time may not exceed one hour per day. At this time, if the solar panel is too small and the light is not sufficient, it cannot be charged.
+> 3. Connect the VBUS pin to the USB-C power supply. If USB-C is present, the VBUS voltage is equal to the USB-C voltage. If USB-C is not present, there is no voltage on VBUS.
+> 4. Connect the VBAT pin to the positive terminal of the battery. This pin can be used to connect an external battery directly to the VBAT pin. When using an external battery, it is best not to connect the battery to the development board's 18650 battery holder unless the battery's parameters are similar to the external battery. Batteries connected to the VBAT pin can be charged using the onboard charge management.
 
 ### Button Description
 
