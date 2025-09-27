@@ -142,6 +142,15 @@
 > 3. Connect the VBUS pin to the USB-C power supply. If USB-C is present, the VBUS voltage is equal to the USB-C voltage. If USB-C is not present, there is no voltage on VBUS.
 > 4. Connect the VBAT pin to the positive terminal of the battery. This pin can be used to connect an external battery directly to the VBAT pin. When using an external battery, it is best not to connect the battery to the development board's 18650 battery holder unless the battery's parameters are similar to the external battery. Batteries connected to the VBAT pin can be charged using the onboard charge management.
 
+### ⚡Battery Protector Description
+
+| Features                | Details    |
+| ----------------------- | ---------- |
+| Over-Voltage Threshold  | 4.30V      |
+| Under-Voltage Threshold | 2.5V       |
+| Over-Discharge Current  | 3A         |
+| ChipName                | [DW01V][2] |
+
 ### Button Description
 
 | Button              | Function                                                                             |
@@ -212,3 +221,5 @@
   1. VBUS Pin and USB-C are on the same line. Only when USB-C is connected, VBUS has voltage
   2. When only the battery is connected, VBUS has no voltage output
   3. If you want to connect an external power supply without connecting USB-C, VBUS Pin is the only voltage input pin. Please note that the maximum input of VBUS Pin is 5V, do not exceed 5V
+
+[2]: https://item.szlcsc.com/datasheet/DW01V/140050.html?spm=sc.it.pdf.fd&lcsc_vid=QgRWVldWE1dZAwECQFUMVgYHFFRdXlxWRlELVFQFTgMxVlNTT1hdUldfQ1JeXjsOAxUeFF5JWBYZEEoEHg8JSQcJGk4%3D

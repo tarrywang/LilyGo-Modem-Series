@@ -149,6 +149,15 @@
 > 3. Connect the VBUS pin to the USB-C power supply. If USB-C is present, the VBUS voltage is equal to the USB-C voltage. If USB-C is not present, there is no voltage on VBUS.
 > 4. Connect the VBAT pin to the positive terminal of the battery. This pin can be used to connect an external battery directly to the VBAT pin. When using an external battery, it is best not to connect the battery to the development board's 18650 battery holder unless the battery's parameters are similar to the external battery. Batteries connected to the VBAT pin can be charged using the onboard charge management.
 
+### ⚡Battery Protector Description
+
+| Features                | Details    |
+| ----------------------- | ---------- |
+| Over-Voltage Threshold  | 4.30V      |
+| Under-Voltage Threshold | 2.5V       |
+| Over-Discharge Current  | 3A         |
+| ChipName                | [DW01V][2] |
+
 ### Button Description
 
 | Button              | Function                                                                             |
@@ -227,3 +236,5 @@
   2. The figure below shows a version without a decoder. If there is a chip here, you can solder the microphone to the MIC+ and MIC- pads and the speaker to the SPK pad.
 
     ![decoder](./images/decoder.jpg)
+
+[2]: https://item.szlcsc.com/datasheet/DW01V/140050.html?spm=sc.it.pdf.fd&lcsc_vid=QgRWVldWE1dZAwECQFUMVgYHFFRdXlxWRlELVFQFTgMxVlNTT1hdUldfQ1JeXjsOAxUeFF5JWBYZEEoEHg8JSQcJGk4%3D

@@ -153,6 +153,15 @@
 > 3. Connect the VBUS pin to the USB-C power supply. If USB-C is present, the VBUS voltage is equal to the USB-C voltage. If USB-C is not present, there is no voltage on VBUS.
 > 4. Connect the VBAT pin to the positive terminal of the battery. This pin can be used to connect an external battery directly to the VBAT pin. When using an external battery, it is best not to connect the battery to the development board's 18650 battery holder unless the battery's parameters are similar to the external battery. Batteries connected to the VBAT pin can be charged using the onboard charge management.
 
+### ⚡Battery Protector Description
+
+| Features                | Details    |
+| ----------------------- | ---------- |
+| Over-Voltage Threshold  | 4.30V      |
+| Under-Voltage Threshold | 2.4V       |
+| Over-Discharge Current  | 3A         |
+| ChipName                | [DW06D][2] |
+
 ### Button Description
 
 | Button              | Function                            |
@@ -232,3 +241,5 @@
 
 * **How to use voice call example?**
   1. Voice calls require external welding of the condenser microphone and speaker. Generally, the board silk screen is marked SPK. The speaker needs to be welded, and the MIC silk screen position needs to weld the condenser microphone. , **T-A7670** the microphone and speaker connections are located [issue/130](https://github.com/Xinyuan-LilyGO/LilyGO-T-A76XX/issues/130)
+
+[2]: https://item.szlcsc.com/datasheet/DW06D%252FJ/83278.html?spm=sc.it.pdf.fd___sc.gbn.xh1.zy.n&lcsc_vid=QgRWVldWE1dZAwECQFUMVgYHFFRdXlxWRlELVFQFTgMxVlNTT1hdUldfQ1JeXjsOAxUeFF5JWBYZEEoEHg8JSQcJGk4%3D
