@@ -4,3 +4,21 @@ test
 script
 build
 extars
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Project specific
+src/
+diagnose.sh
+check_serial.py
+at_terminal.py
